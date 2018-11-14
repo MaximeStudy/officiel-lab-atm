@@ -19,6 +19,7 @@ public class BankingService {
         this.accountRepository = ServiceLocator.resolve(AccountRepository.class);
         this.cashDispenser = ServiceLocator.resolve(CashDispenser.class);
         this.receiptAssembler = ServiceLocator.resolve(ReceiptAssembler.class);
+        this.entityManagerProvider = new EntityManagerProvider();
     }
 
     public BankingService(AccountRepository accountRepository, CashDispenser cashDispenser,
